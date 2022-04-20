@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/cvIVR"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:elevation="20dp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/signn"
+            android:id="@+id/ivImage"
+            android:scaleType="centerCrop"/>
+
+    </androidx.cardview.widget.CardView>
+
+<!--    <ImageView-->
+<!--        android:id="@+id/IVR"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:background="@drawable/splashimg" />-->
+
+    <TextView
+        android:id="@+id/TVname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cvIVR"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:letterSpacing="0.1"
+        android:text="Rahul Mistry"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/TVemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mistryrahul13@gmail.com"
+        android:layout_below="@id/TVname"
+        android:layout_centerHorizontal="true"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@id/TVemail"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#AEAEAE" />
+
+
+</RelativeLayout>

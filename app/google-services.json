@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "530231231541",
+    "project_id": "health-management-2205f",
+    "storage_bucket": "health-management-2205f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530231231541:android:7be863fe229b708b85dd7c",
+        "android_client_info": {
+          "package_name": "com.example.healthprotection"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "530231231541-ivcleuk346ptd7k6ieumu9g8d0tpepdv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.healthprotection",
+            "certificate_hash": "dc2a817bb88e5cb92568721059c6eaf2b5ab43cb"
+          }
+        },
+        {
+          "client_id": "530231231541-mjsf4lbfuoif8j8r1f89720vu63ucaqi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAS_A1MsaWlnXewFevEcIixQvoe8Sn3Vf4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "530231231541-mjsf4lbfuoif8j8r1f89720vu63ucaqi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

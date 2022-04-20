@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".health_static.ForegetFrag">
+
+    <TextView
+        android:id="@+id/entertext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivfrgt"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:text="Please enter your Gmail Id"
+        android:textColor="#424242"
+        android:textStyle="bold" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/resetbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etbtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#8BCED1"
+        android:text="Send Reset Link"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/etbtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/entertext"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="yourGmail@example.com" />
+
+    <ImageView
+        android:id="@+id/ivfrgt"
+        android:layout_width="250dp"
+        android:layout_height="180dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/frgt" />
+
+
+</RelativeLayout>

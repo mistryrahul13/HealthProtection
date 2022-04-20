@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_navigation"
+    app:startDestination="@id/loginFrag">
+
+    <fragment
+        android:id="@+id/loginFrag"
+        android:name="com.example.healthprotection.health_static.LoginFrag"
+        android:label="fragment_login_frag"
+        tools:layout="@layout/fragment_login_frag" >
+        <action
+            android:id="@+id/action_loginFrag_to_signUpFrag"
+            app:destination="@id/signUpFrag" />
+        <action
+            android:id="@+id/action_loginFrag_to_foregetFrag"
+            app:destination="@id/foregetFrag" />
+        <action
+            android:id="@+id/action_loginFrag_to_dashboardActivity"
+            app:destination="@id/dashboardActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFrag"
+        android:name="com.example.healthprotection.health_static.SignUpFrag"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFrag_to_loginFrag2"
+            app:destination="@id/loginFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/foregetFrag"
+        android:name="com.example.healthprotection.health_static.ForegetFrag"
+        android:label="fragment_foreget"
+        tools:layout="@layout/fragment_foreget" >
+        <action
+            android:id="@+id/action_foregetFrag_to_loginFrag"
+            app:destination="@id/loginFrag" />
+    </fragment>
+    <activity
+        android:id="@+id/dashboardActivity"
+        android:name="com.example.healthprotection.health_static.DashboardActivity"
+        android:label="activity_dashboard"
+        tools:layout="@layout/activity_dashboard" />
+</navigation>

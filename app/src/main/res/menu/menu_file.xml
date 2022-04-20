@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/g1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/idtitle"
+            android:title="Title">
+            <menu>
+                <item
+                    android:id="@+id/idsrch"
+                    android:title="Search"
+                    android:icon="@drawable/iconsearch"/>
+                <item
+                    android:id="@+id/idgetappo"
+                    android:title="Get Appointment"
+                    android:icon="@drawable/icongetappo"/>
+                <item
+                    android:id="@+id/idappo"
+                    android:title="Appointments"
+                    android:icon="@drawable/iconappo"/>
+                <item
+                    android:id="@+id/idDoctors"
+                    android:title="Doctors"
+                    android:icon="@drawable/icondoc"/>
+                <item
+                    android:id="@+id/idReports"
+                    android:title="Reports"
+                    android:icon="@drawable/icontest"/>
+
+            </menu>
+        </item>
+    </group>
+
+
+
+    <group
+        android:id="@+id/g2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/idtitle2"
+            android:title="Subtitle">
+            <menu>
+                <item
+                    android:id="@+id/idhelp"
+                    android:title="Help"
+                    android:icon="@drawable/iconhelp"/>
+                <item
+                    android:id="@+id/idsettings"
+                    android:title="Settings"
+                    android:icon="@drawable/iconsettings"/>
+
+            </menu>
+        </item>
+    </group>
+</menu>
+

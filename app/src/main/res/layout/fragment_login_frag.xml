@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/loginpg"
+    tools:context=".health_static.LoginFrag">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="310dp"
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/logg">
+
+    </ImageView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pswrd1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Login  ➡"
+        android:textColor="@color/black">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <TextView
+        android:id="@+id/tvpls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img"
+        android:layout_centerHorizontal="true"
+        android:text="Please sign in to continue."
+        android:textColor="#6C757D"
+        android:textStyle="bold" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user1"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        app:boxStrokeColor="@color/black"
+        android:hint="Gmail Id"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="310dp"
+            android:id="@+id/user"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pswrd1"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user1"
+        android:hint="Password"
+        app:boxStrokeColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="310dp"
+            android:id="@+id/pswrd"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/newuser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="30dp"
+        android:layout_toRightOf="@id/tvdhaa"
+        android:text="Sign Up"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tvdhaa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/btnlogin"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30dp"
+        android:text="Don't have an account?"
+        android:textColor="#6C757D"
+        android:textSize="18dp" />
+
+
+    <TextView
+        android:id="@+id/fgtpswrd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/newuser"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="Forget Password"
+        android:textSize="16dp">
+
+    </TextView>
+</RelativeLayout>
