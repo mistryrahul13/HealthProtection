@@ -84,9 +84,9 @@ public class SignUpFrag extends Fragment {
         binding.Register.setOnClickListener(view1 -> {
 
             String name = binding.LN.getText().toString();
-            String email = binding.Email.getText().toString();
-            String password = binding.Pswrd.getText().toString();
-            String repeatpassword = binding.Rptpswrd.getText().toString();
+            String email = binding.Email.getText().toString().trim();
+            String password = binding.Pswrd.getText().toString().trim();
+            String repeatpassword = binding.Rptpswrd.getText().toString().trim();
 
             auth.createUserWithEmailAndPassword(email,password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                 @Override

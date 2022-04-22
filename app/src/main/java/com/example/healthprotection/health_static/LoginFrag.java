@@ -53,8 +53,8 @@ public class LoginFrag extends Fragment {
 
 
        binding.btnlogin.setOnClickListener(view1 -> {
-           String email = binding.user.getText().toString();
-           String password = binding.pswrd.getText().toString();
+           String email = binding.user.getText().toString().trim();
+           String password = binding.pswrd.getText().toString().trim();
 
 
 

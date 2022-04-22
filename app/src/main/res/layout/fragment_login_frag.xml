@@ -64,6 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/user1"
         android:hint="Password"
+        app:passwordToggleEnabled="true"
         app:boxStrokeColor="@color/black"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
@@ -73,6 +74,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="310dp"
             android:id="@+id/pswrd"
+            android:inputType="textPassword"
             android:layout_height="wrap_content"/>
     </com.google.android.material.textfield.TextInputLayout>
 
