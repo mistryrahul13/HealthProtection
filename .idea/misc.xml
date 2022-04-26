@@ -4,7 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/activity_dashboard.xml" value="0.25" />
-        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/activity_splash_screen.xml" value="0.152" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/activity_user.xml" value="0.25" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/ctoolbar.xml" value="0.25" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/fragment_foreget.xml" value="0.25" />
@@ -13,6 +13,15 @@
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/fragment_sign_up.xml" value="0.25" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/header_layput.xml" value="0.25" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/menu/menu_file.xml" value="0.25" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/mipmap-anydpi-v26/he_new.xml" value="0.1385" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/mipmap-anydpi-v26/he_new_round.xml" value="0.121" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1385" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1385" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/mipmap-anydpi-v26/ic_logo.xml" value="0.1385" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/mipmap-anydpi-v26/ic_logo_round.xml" value="0.1385" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/mipmap-anydpi-v26/ic_new_round.xml" value="0.1385" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/mipmap-anydpi-v26/ic_newapp.xml" value="0.121" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/mipmap-anydpi-v26/ic_newapp_round.xml" value="0.121" />
       </map>
     </option>
   </component>
