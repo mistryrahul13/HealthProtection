@@ -1,4 +1,4 @@
-package com.example.healthprotection.health_static;
+package com.example.healthprotection.health_static.authentication;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -20,6 +20,7 @@ import android.widget.Toast;
 
 import com.example.healthprotection.R;
 import com.example.healthprotection.databinding.FragmentSignUpBinding;
+import com.example.healthprotection.health_static.User;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
@@ -39,10 +40,9 @@ public class SignUpFrag extends Fragment {
     private FirebaseAuth auth;
     private DatabaseReference ref;
     private StorageReference storageref;
+    private ActivityResultLauncher<String> gallery;
     private Uri uri=null;
     private String uid;
-
-    private ActivityResultLauncher<String>gallery;
 
 
     @Override
@@ -88,30 +88,43 @@ public class SignUpFrag extends Fragment {
             String password = binding.Pswrd.getText().toString().trim();
             String repeatpassword = binding.Rptpswrd.getText().toString().trim();
 
-            auth.createUserWithEmailAndPassword(email,password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-                @Override
-                public void onSuccess(AuthResult authResult) {
 
-                    uid = auth.getCurrentUser().getUid();
+            if(!email.isEmpty() && !password.isEmpty() && !repeatpassword.isEmpty()){
 
-                    storageref= FirebaseStorage.getInstance().getReference("images").child("userImage").child(uid);
-                    storageref.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                if (password.equals(repeatpassword)){
 
+                    auth.createUserWithEmailAndPassword(email,password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                         @Override
-                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        public void onSuccess(AuthResult authResult) {
 
-                            storageref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                            uid = auth.getCurrentUser().getUid();
+
+                            storageref= FirebaseStorage.getInstance().getReference("images").child("userImage").child(uid);
+                            storageref.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+
                                 @Override
-                                public void onSuccess(Uri uri) {
+                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
-                                    String userId = uri.toString();
-
-                                    User user = new User(name,email,uid,userId);
-                                    ref.push().setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    storageref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                         @Override
-                                        public void onSuccess(Void unused){
-                                            Toast.makeText(getActivity(), "Success", Toast.LENGTH_SHORT).show();
-                                            Navigation.findNavController(getView()).navigate(R.id.action_signUpFrag_to_loginFrag2);
+                                        public void onSuccess(Uri uri) {
+
+                                            String userId = uri.toString();
+
+                                            User user = new User(name,email,uid,userId);
+                                            ref.push().setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                @Override
+                                                public void onSuccess(Void unused){
+                                                    Toast.makeText(getActivity(), "Success", Toast.LENGTH_SHORT).show();
+                                                    Navigation.findNavController(getView()).navigate(R.id.action_signUpFrag_to_loginFrag2);
+                                                }
+                                            }).addOnFailureListener(new OnFailureListener() {
+                                                @Override
+                                                public void onFailure(@NonNull Exception e) {
+                                                    Log.i("Myerror",e.toString());
+                                                }
+                                            });
+
                                         }
                                     }).addOnFailureListener(new OnFailureListener() {
                                         @Override
@@ -119,29 +132,32 @@ public class SignUpFrag extends Fragment {
                                             Log.i("Myerror",e.toString());
                                         }
                                     });
-
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
                                     Log.i("Myerror",e.toString());
+
                                 }
                             });
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Log.i("Myerror",e.toString());
-
+                            Log.i("Myerror", e.toString());
                         }
                     });
+
+                }else {
+                    Toast.makeText(getActivity(), "Fill the same password", Toast.LENGTH_SHORT).show();
                 }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    Log.i("Myerror", e.toString());
-                }
-            });
+
+            }else {
+                binding.LN.setError("Fill the name");
+                binding.Email.setError("Fill the gmail");
+            }
+
+
         });
     }
 }

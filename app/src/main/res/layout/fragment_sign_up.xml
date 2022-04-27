@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/signupp"
     android:padding="20dp"
-    tools:context=".health_static.SignUpFrag">
+    tools:context=".health_static.authentication.SignUpFrag">
 
     <androidx.cardview.widget.CardView
         android:layout_width="150dp"

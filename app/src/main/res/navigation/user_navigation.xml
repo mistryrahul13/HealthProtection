@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFrag"
-        android:name="com.example.healthprotection.health_static.LoginFrag"
+        android:name="com.example.healthprotection.health_static.authentication.LoginFrag"
         android:label="fragment_login_frag"
         tools:layout="@layout/fragment_login_frag" >
         <action
@@ -19,10 +19,16 @@
         <action
             android:id="@+id/action_loginFrag_to_dashboardActivity"
             app:destination="@id/dashboardActivity" />
+        <action
+            android:id="@+id/action_loginFrag_to_doctorActivity"
+            app:destination="@id/doctorActivity" />
+        <action
+            android:id="@+id/action_loginFrag_to_adminActivity"
+            app:destination="@id/adminActivity" />
     </fragment>
     <fragment
         android:id="@+id/signUpFrag"
-        android:name="com.example.healthprotection.health_static.SignUpFrag"
+        android:name="com.example.healthprotection.health_static.authentication.SignUpFrag"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" >
         <action
@@ -31,7 +37,7 @@
     </fragment>
     <fragment
         android:id="@+id/foregetFrag"
-        android:name="com.example.healthprotection.health_static.ForegetFrag"
+        android:name="com.example.healthprotection.health_static.authentication.ForegetFrag"
         android:label="fragment_foreget"
         tools:layout="@layout/fragment_foreget" >
         <action
@@ -40,7 +46,17 @@
     </fragment>
     <activity
         android:id="@+id/dashboardActivity"
-        android:name="com.example.healthprotection.health_static.DashboardActivity"
+        android:name="com.example.healthprotection.health_static.DashboardActivityRahul"
         android:label="activity_dashboard"
         tools:layout="@layout/activity_dashboard" />
+    <activity
+        android:id="@+id/doctorActivity"
+        android:name="com.example.healthprotection.health_static.doctor_activity.DoctorActivity"
+        android:label="activity_doctor"
+        tools:layout="@layout/activity_doctor" />
+    <activity
+        android:id="@+id/adminActivity"
+        android:name="com.example.healthprotection.health_static.admin.AdminActivity"
+        android:label="activity_admin"
+        tools:layout="@layout/activity_admin" />
 </navigation>

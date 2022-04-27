@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.healthprotection">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,13 +12,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthProtection">
         <activity
-            android:name=".health_static.AdminPanelActivity"
+            android:name=".health_static.DoctorDetailsActivity"
             android:exported="false" />
+        <activity
+            android:name=".health_static.doctor_activity.DoctorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".health_static.SeeDocListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".health_static.admin.AdminActivity"
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".health_static.DashboardActivity"
             android:exported="false" />
         <activity
-            android:name=".health_static.UserActivity"
+            android:name=".health_static.DashboardActivityRahul"
+            android:exported="false" />
+        <activity
+            android:name=".health_static.authentication.UserActivity"
             android:exported="false" />
         <activity
             android:name=".health_static.SplashScreenActivity"
@@ -31,7 +45,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

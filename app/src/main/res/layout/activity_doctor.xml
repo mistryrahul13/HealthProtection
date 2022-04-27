@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".health_static.AdminPanelActivity">
+    tools:context=".health_static.doctor_activity.DoctorActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

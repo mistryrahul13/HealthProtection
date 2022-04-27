@@ -1,4 +1,4 @@
-package com.example.healthprotection.health_static;
+package com.example.healthprotection.health_static.authentication;
 
 import android.os.Bundle;
 
@@ -38,20 +38,27 @@ public class ForegetFrag extends Fragment {
 
         binding.resetbtn.setOnClickListener(view1 -> {
             String email= binding.etbtn.getText().toString().trim();
-            auth.sendPasswordResetEmail(email).addOnSuccessListener(new OnSuccessListener<Void>() {
-                @Override
-                public void onSuccess(Void unused) {
-                    Toast.makeText(getActivity(), "Reset link sent to Gmail", Toast.LENGTH_SHORT).show();
+            if (!email.isEmpty()){
 
-                }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    Toast.makeText(getActivity(), "Enter valid Gmail Id", Toast.LENGTH_SHORT).show();
+                auth.sendPasswordResetEmail(email).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(getActivity(), "Reset link sent to Gmail", Toast.LENGTH_SHORT).show();
+
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(getActivity(), "Enter valid Gmail Id", Toast.LENGTH_SHORT).show();
 
 
-                }
-            });
+                    }
+                });
+            }else {
+//                Toast.makeText(getActivity(), "Invalid Gmail", Toast.LENGTH_SHORT).show();
+                binding.etbtn.setError("Fill the gmail");
+            }
+
 
         });
     }

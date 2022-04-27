@@ -1,4 +1,4 @@
-package com.example.healthprotection.health_static;
+package com.example.healthprotection.health_static.authentication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,9 +15,5 @@ public class UserActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         getSupportActionBar().hide();
-
-
-
-
     }
 }

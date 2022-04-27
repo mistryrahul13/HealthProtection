@@ -2,11 +2,11 @@ package com.example.healthprotection.health_static;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.healthprotection.databinding.ActivitySplashScreenBinding;
+import com.example.healthprotection.health_static.authentication.UserActivity;
 
 public class SplashScreenActivity extends AppCompatActivity {
     private ActivitySplashScreenBinding binding;
