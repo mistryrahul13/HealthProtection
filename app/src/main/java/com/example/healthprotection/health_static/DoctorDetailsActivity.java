@@ -49,8 +49,8 @@ public class DoctorDetailsActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         getSupportActionBar().hide();
 
-        Intent i5 =getIntent();
-        d = (Doctor) i5.getSerializableExtra("doc");
+        Intent intent =getIntent();
+        d = (Doctor) intent.getSerializableExtra("doc");
 
         auth = FirebaseAuth.getInstance();
         ref = FirebaseDatabase.getInstance().getReference("appointment");
@@ -63,13 +63,24 @@ public class DoctorDetailsActivity extends AppCompatActivity {
         Glide.with(DoctorDetailsActivity.this)
                 .load(d.photoUrl).into(binding.ivdocp);
 
+
+
         binding.btnbook.setOnClickListener(view -> {
             binding1 = BookAppointmentDailogBinding.inflate(getLayoutInflater());
+
 
             binding1.dornametv.setText(d.name);
             binding1.exptv.setText(d.expertise);
             Glide.with(DoctorDetailsActivity.this)
                     .load(d.photoUrl).into(binding1.ivproflieview1);
+
+//            binding.toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//
+//
+//                }
+//            });
 
             binding1.btntime.setOnClickListener(view1 -> {
                 binding2 = TimeZoneSBinding.inflate(getLayoutInflater());
@@ -181,7 +192,6 @@ public class DoctorDetailsActivity extends AppCompatActivity {
 
             });
 
-
             binding1.btnbookadd.setOnClickListener(view1 -> {
                 String patientname = binding1.patientname.getText().toString();
                 String patientDiagnosis = binding1.patientDiagnosis.getText().toString();
@@ -224,14 +234,12 @@ public class DoctorDetailsActivity extends AppCompatActivity {
                     binding1.patientDiagnosis.setError("Fill the diagnosis");
                     binding1.Diagnosisdescription.setError("Fill the diagnosis description");
                 }
-
             });
-            Dialog dialog = new Dialog(DoctorDetailsActivity.this, android.R.style.Theme_Light);
+            dialog = new Dialog(DoctorDetailsActivity.this, android.R.style.Theme_Light);
             dialog.setContentView(binding1.getRoot());
             dialog.show();
 
         });
-
         binding.toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
