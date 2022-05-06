@@ -23,6 +23,7 @@ public class DoctorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityDoctorBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        getSupportActionBar().hide();
 
         auth =FirebaseAuth.getInstance();
 

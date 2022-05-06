@@ -8,7 +8,7 @@
     android:textColor="@color/black"
     android:textSize="18dp"
     android:textStyle="bold"
-    android:background="#55B1FA">
+    android:background="#35A5DE">
 
 </TextView>
 

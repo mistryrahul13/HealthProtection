@@ -13,9 +13,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
         android:layout_marginRight="20dp"
-        android:text="Add Appointment"
+        android:text="Appointment"
         app:icon="@drawable/ic_add"
-        android:backgroundTint="#90e0ef"/>
+        android:backgroundTint="#35A5DE"/>
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

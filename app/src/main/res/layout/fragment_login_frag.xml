@@ -24,6 +24,7 @@
         android:layout_below="@id/pswrd1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
+        android:backgroundTint="#74E4EA"
         android:text="Login  ➡"
         android:textColor="@color/black">
 

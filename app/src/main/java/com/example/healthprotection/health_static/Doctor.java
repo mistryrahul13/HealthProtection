@@ -14,11 +14,11 @@ public class Doctor implements Serializable {
     @Override
     public String toString() {
         return "Doctor" +
-                "\nname      ='" + name +
-                "\nemail     ='" + email +
-                "\nexpertise ='" + expertise +
-                "\naddress   ='" + address +
-                "\nhour      ='" + hour;
+                "\nName        = " + name +
+                "\nEmail        = " + email +
+                "\nExpertise = " + expertise +
+                "\nAddress   = " + address +
+                "\nTiming     =  " + hour;
     }
 
     Doctor(){

@@ -10,11 +10,11 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="125dp"
-        app:title="@string/app_name"
-        app:titleTextColor="@color/black"
+        app:title="Health Expert"
+        app:titleTextColor="#35A5DE"
         app:titleCentered="true"
         style="@style/Widget.MaterialComponents.Toolbar.Primary"
-        android:background="@drawable/settings"
+        android:background="@drawable/back_ground_2"
         app:menu="@menu/right_menu" />
 
     <androidx.fragment.app.FragmentContainerView
@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#BCCBDD"
+        android:background="#35A5DE"
         app:menu="@menu/user_appoinment_bottom" />
 
 </RelativeLayout>

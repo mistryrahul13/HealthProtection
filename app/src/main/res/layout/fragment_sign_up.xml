@@ -17,6 +17,7 @@
         android:layout_marginTop="40dp"
         android:layout_gravity="center"
         android:elevation="10dp"
+        app:cardElevation="10dp"
         >
 
         <ImageView
@@ -95,6 +96,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/Rptpswrd"
+        android:backgroundTint="#74E4EA"
         android:layout_centerHorizontal="true"
         android:text="Sign up ➡" />
 

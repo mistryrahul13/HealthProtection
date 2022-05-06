@@ -11,9 +11,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/ivfrgt"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="112dp"
         android:layout_marginTop="40dp"
-        android:layout_centerHorizontal="true"
         android:text="Please enter your Gmail Id"
         android:textColor="#424242"
         android:textStyle="bold" />
@@ -24,15 +24,15 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/etbtn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#8BCED1"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#35A5DE"
         android:text="Send Reset Link"
         android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/etbtn"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_below="@id/entertext"
         android:layout_marginTop="30dp"
         android:ems="10"

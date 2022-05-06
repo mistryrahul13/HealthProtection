@@ -6,11 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".health_static.admin.AdminActivity">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        app:title="Health Expert (Admin Panel)"
+        app:titleTextColor="#35A5DE"
+        app:titleCentered="true"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary"
+        android:background="@drawable/back_ground_2"
+        app:menu="@menu/right_menu"/>
+
+<!--    app:titleTextAppearance="@style/Toolbar.TitleText"-->
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fcv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/bnv"
+        android:layout_below="@id/toolbar"
         android:name="androidx.navigation.fragment.NavHostFragment"
         app:defaultNavHost="true"
         app:navGraph="@navigation/admin_navigation"/>
@@ -20,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#90e0ef"
+        android:background="#35A5DE"
         app:menu="@menu/bottom" />
 
 </RelativeLayout>

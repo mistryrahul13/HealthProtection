@@ -31,16 +31,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:title="Health Expert"
-            app:collapsedTitleTextColor="@color/black"
-            app:expandedTitleTextColor="@color/black"
+            app:collapsedTitleTextColor="#00a896"
+            app:expandedTitleTextColor="#00a896"
             app:collapsedTitleGravity="start"
             app:expandedTitleGravity="center"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="220dp"
-                android:src="@drawable/settings"
+                android:layout_height="180dp"
+                android:src="@drawable/back_ground_2"
                 android:scaleType="centerCrop"
                 app:layout_collapseMode="parallax"/>
 
@@ -167,6 +167,49 @@
                     </LinearLayout>
 
                 </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="25dp"
+                android:layout_below="@id/doctorcard"
+                app:cardElevation="10dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        app:srcCompat="@drawable/back_ground"
+                        android:scaleType="centerCrop" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@color/white">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="New Features will be Launched Soon"
+                            android:textStyle="bold"
+                            android:textSize="30dp"
+                            android:textColor="@color/black"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
 
             </RelativeLayout>
 

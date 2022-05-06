@@ -11,12 +11,11 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="125dp"
-        app:title="The Health Care (Doctor)"
-        app:titleTextColor="@color/black"
-
+        app:title="Health Expert (Doctor Panel)"
+        app:titleTextColor="#35A5DE"
         app:titleCentered="true"
         style="@style/Widget.MaterialComponents.Toolbar.Primary"
-        android:background="@drawable/helogo"
+        android:background="@drawable/back_ground_2"
         app:menu="@menu/right_menu"/>
 
 
@@ -38,7 +37,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/bnvdoctor"
         android:layout_alignParentBottom="true"
-        android:background="#BCCBDD"
+        android:background="#35A5DE"
         app:menu="@menu/doctor_bottom"/>
 
 </RelativeLayout>
