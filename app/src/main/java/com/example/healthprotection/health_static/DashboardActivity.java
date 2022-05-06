@@ -146,93 +146,93 @@ public class DashboardActivity extends AppCompatActivity {
                 case R.id.help:
                     Toast.makeText(this, "help", Toast.LENGTH_SHORT).show();
                     break;
-                case R.id.editpro:
-
-                    binding1 = EditHederBinding.inflate(getLayoutInflater());
-
-                    view1 = binding.navigationView.getHeaderView(0);
-
-                    TextView name = view1.findViewById(R.id.nameTV);
-                    TextView email = view1.findViewById(R.id.emailTV);
-                    String name1 = name.getText().toString();
-                    String email1 =email.getText().toString();
-
-                    binding1.etname.setText(name1);
-                    binding1.etemail.setText(email1);
-                    Glide.with(DashboardActivity.this)
-                            .load(user2.getImageUrl()).into(binding1.ivproflieuser);
-
-                    binding1.ivproflieuser.setOnClickListener(view3 -> {
-                        gallery.launch("*/*");
-                    });
-
-                    new AlertDialog.Builder(DashboardActivity.this)
-                            .setView(binding1.getRoot())
-                            .setCancelable(false)
-                            .setPositiveButton("Update", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-
-                                    String name = binding1.etname.getText().toString();
-                                    String email = binding1.etemail.getText().toString();
-
-//                                        User user1 = new User(name,email,userId,user2.imageUrl);
-
-//                                        ref.child(key).setValue(user1);
-
-                                    storageRef = FirebaseStorage.getInstance().getReference("images").child("userImages").child(user2.uid);
-
-                                    storageRef.putFile(uri1).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                                        @Override
-                                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-
-                                            storageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                                @Override
-                                                public void onSuccess(Uri uri) {
-
-                                                    String UserId = uri.toString();
-
-                                                    User user3 = new User(name,email,userId,UserId);
-
-                                                    ref.push().setValue(user3).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                                        @Override
-                                                        public void onSuccess(Void unused) {
-                                                            ref.child(key).setValue(user3);
-                                                            dialogInterface.dismiss();
-                                                        }
-                                                    }).addOnFailureListener(new OnFailureListener() {
-                                                        @Override
-                                                        public void onFailure(@NonNull Exception e) {
-                                                            Log.i("Myerror",e.toString());
-                                                        }
-                                                    });
-                                                }
-                                            }).addOnFailureListener(new OnFailureListener() {
-                                                @Override
-                                                public void onFailure(@NonNull Exception e) {
-                                                    Log.i("Myerror",e.toString());
-                                                }
-                                            });
-                                        }
-                                    }).addOnFailureListener(new OnFailureListener() {
-                                        @Override
-                                        public void onFailure(@NonNull Exception e) {
-                                            Log.i("Myerror",e.toString());
-                                        }
-                                    });
-
-                                }
-                            }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            dialogInterface.dismiss();
-                        }
-                    }).create().show();
-                    break;
-
-                case R.id.setting:
-                    Toast.makeText(this, "setting", Toast.LENGTH_SHORT).show();
-                    break;
+//                case R.id.editpro:
+//
+//                    binding1 = EditHederBinding.inflate(getLayoutInflater());
+//
+//                    view1 = binding.navigationView.getHeaderView(0);
+//
+//                    TextView name = view1.findViewById(R.id.nameTV);
+//                    TextView email = view1.findViewById(R.id.emailTV);
+//                    String name1 = name.getText().toString();
+//                    String email1 =email.getText().toString();
+//
+//                    binding1.etname.setText(name1);
+//                    binding1.etemail.setText(email1);
+//                    Glide.with(DashboardActivity.this)
+//                            .load(user2.getImageUrl()).into(binding1.ivproflieuser);
+//
+//                    binding1.ivproflieuser.setOnClickListener(view3 -> {
+//                        gallery.launch("*/*");
+//                    });
+//
+//                    new AlertDialog.Builder(DashboardActivity.this)
+//                            .setView(binding1.getRoot())
+//                            .setCancelable(false)
+//                            .setPositiveButton("Update", new DialogInterface.OnClickListener() {
+//                                @Override
+//                                public void onClick(DialogInterface dialogInterface, int i) {
+//
+//                                    String name = binding1.etname.getText().toString();
+//                                    String email = binding1.etemail.getText().toString();
+//
+////                                        User user1 = new User(name,email,userId,user2.imageUrl);
+//
+////                                        ref.child(key).setValue(user1);
+//
+//                                    storageRef = FirebaseStorage.getInstance().getReference("images").child("userImages").child(user2.uid);
+//
+//                                    storageRef.putFile(uri1).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+//                                        @Override
+//                                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+//
+//                                            storageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+//                                                @Override
+//                                                public void onSuccess(Uri uri) {
+//
+//                                                    String UserId = uri.toString();
+//
+//                                                    User user3 = new User(name,email,userId,UserId);
+//
+//                                                    ref.push().setValue(user3).addOnSuccessListener(new OnSuccessListener<Void>() {
+//                                                        @Override
+//                                                        public void onSuccess(Void unused) {
+//                                                            ref.child(key).setValue(user3);
+//                                                            dialogInterface.dismiss();
+//                                                        }
+//                                                    }).addOnFailureListener(new OnFailureListener() {
+//                                                        @Override
+//                                                        public void onFailure(@NonNull Exception e) {
+//                                                            Log.i("Myerror",e.toString());
+//                                                        }
+//                                                    });
+//                                                }
+//                                            }).addOnFailureListener(new OnFailureListener() {
+//                                                @Override
+//                                                public void onFailure(@NonNull Exception e) {
+//                                                    Log.i("Myerror",e.toString());
+//                                                }
+//                                            });
+//                                        }
+//                                    }).addOnFailureListener(new OnFailureListener() {
+//                                        @Override
+//                                        public void onFailure(@NonNull Exception e) {
+//                                            Log.i("Myerror",e.toString());
+//                                        }
+//                                    });
+//
+//                                }
+//                            }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+//                        @Override
+//                        public void onClick(DialogInterface dialogInterface, int i) {
+//                            dialogInterface.dismiss();
+//                        }
+//                    }).create().show();
+//                    break;
+//
+//                case R.id.setting:
+//                    Toast.makeText(this, "setting", Toast.LENGTH_SHORT).show();
+//                    break;
             }
             return false;
         });

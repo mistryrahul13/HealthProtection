@@ -58,7 +58,7 @@ public class SignUpFrag extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         binding.signin.setOnClickListener(view1 -> {
-            Navigation.findNavController(getView()).navigate(R.id.action_signUpFrag_to_loginFrag2);
+            Navigation.findNavController(getView()).popBackStack(R.id.loginFrag,false);
         });
 
         auth = FirebaseAuth.getInstance();
@@ -116,7 +116,7 @@ public class SignUpFrag extends Fragment {
                                                 @Override
                                                 public void onSuccess(Void unused){
                                                     Toast.makeText(getActivity(), "Success", Toast.LENGTH_SHORT).show();
-                                                    Navigation.findNavController(getView()).navigate(R.id.action_signUpFrag_to_loginFrag2);
+                                                    Navigation.findNavController(getView()).popBackStack();
                                                 }
                                             }).addOnFailureListener(new OnFailureListener() {
                                                 @Override
@@ -156,8 +156,13 @@ public class SignUpFrag extends Fragment {
                 binding.LN.setError("Fill the name");
                 binding.Email.setError("Fill the gmail");
             }
-
-
+            clear();
         });
+    }
+    void clear(){
+        binding.LN.setText("");
+        binding.Email.setText("");
+        binding.Pswrd.setText("");
+        binding.Rptpswrd.setText("");
     }
 }

@@ -1,13 +1,13 @@
 package com.example.healthprotection.health_static.doctor_activity;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.navigation.Navigation;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
 
 import com.example.healthprotection.R;
 import com.example.healthprotection.databinding.ActivityDoctorBinding;
@@ -18,12 +18,13 @@ import com.google.firebase.auth.FirebaseAuth;
 public class DoctorActivity extends AppCompatActivity {
     private ActivityDoctorBinding binding;
     private FirebaseAuth auth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityDoctorBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        getSupportActionBar().hide();
+        getSupportActionBar().hide();;
 
         auth =FirebaseAuth.getInstance();
 

@@ -13,7 +13,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import com.example.healthprotection.R;
-import com.example.healthprotection.databinding.FragmentUserRejectAppoinmentBinding;
+import com.example.healthprotection.databinding.FragmentUserRejectAppointmentBinding;
 import com.example.healthprotection.health_static.Appointment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -25,7 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class UserRejectAppointmentFragment extends Fragment {
-    private FragmentUserRejectAppoinmentBinding binding;
+    private FragmentUserRejectAppointmentBinding binding;
     private DatabaseReference ref;
     private FirebaseAuth auth;
     private ArrayList<Appointment> list;
@@ -33,7 +33,7 @@ public class UserRejectAppointmentFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentUserRejectAppoinmentBinding.inflate(getLayoutInflater());
+        binding = FragmentUserRejectAppointmentBinding.inflate(getLayoutInflater());
         return binding.getRoot();
     }
     @Override

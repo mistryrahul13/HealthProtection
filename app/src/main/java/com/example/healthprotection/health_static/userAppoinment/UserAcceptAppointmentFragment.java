@@ -13,7 +13,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import com.example.healthprotection.R;
-import com.example.healthprotection.databinding.FragmentUserAcceptAppoimtmentBinding;
+import com.example.healthprotection.databinding.FragmentUserAcceptAppointmentBinding;
 import com.example.healthprotection.health_static.Appointment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -25,7 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class UserAcceptAppointmentFragment extends Fragment {
-    private FragmentUserAcceptAppoimtmentBinding binding;
+    private FragmentUserAcceptAppointmentBinding binding;
     private DatabaseReference ref;
     private FirebaseAuth auth;
     private ArrayList<Appointment> list;
@@ -33,7 +33,7 @@ public class UserAcceptAppointmentFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentUserAcceptAppoimtmentBinding.inflate(getLayoutInflater());
+        binding = FragmentUserAcceptAppointmentBinding.inflate(getLayoutInflater());
         return binding.getRoot();
     }
     @Override
@@ -99,3 +99,18 @@ public class UserAcceptAppointmentFragment extends Fragment {
 
     }
 }
+
+
+//        new AlertDialog.Builder(getActivity())
+//        .setTitle("Delete this appointment ?")
+//        .setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+//@Override
+//public void onClick(DialogInterface dialogInterface, int i) {
+//
+//        }
+//        }).setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+//@Override
+//public void onClick(DialogInterface dialogInterface, int i) {
+//
+//        }
+//        }).create().show();

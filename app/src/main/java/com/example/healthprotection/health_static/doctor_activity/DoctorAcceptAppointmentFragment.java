@@ -1,12 +1,9 @@
 package com.example.healthprotection.health_static.doctor_activity;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
@@ -33,7 +30,6 @@ public class DoctorAcceptAppointmentFragment extends Fragment {
     private FirebaseAuth auth;
     private ArrayList<Appointment> list;
     private ArrayList<String> keys;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

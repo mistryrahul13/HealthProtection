@@ -64,15 +64,15 @@ public class DoctorAllAppointmentFragment extends Fragment {
 
                     Appointment appointment = childSnap.getValue(Appointment.class);
 
-                    if(auth.getCurrentUser().getUid().equals(appointment.getDoctorID()) && appointment.getStatus().equals("request")){
-
+//                    if(auth.getCurrentUser().getUid().equals(appointment.getDoctorID()) && appointment.getStatus().equals("request")){
+//
+//                        list.add(appointment);
+//
+//                    }
+                    if(appointment.getDoctorID().equals(auth.getCurrentUser().getUid())){
                         list.add(appointment);
-
                     }
 
-//                    if(appointment.getDoctorID().equals(auth.getCurrentUser().getUid())){
-//                        list.add(appointment);
-//                    }
                     keys.add(childSnap.getKey());
                 }
                 adapter.notifyDataSetChanged();
@@ -100,8 +100,8 @@ public class DoctorAllAppointmentFragment extends Fragment {
 
                                 ref.child(key).setValue(appointment);
 
-
                             }
+
                         }).setNeutralButton("Denied", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -109,6 +109,7 @@ public class DoctorAllAppointmentFragment extends Fragment {
                         appointment.setStatus("rejected");
 
                         ref.child(key).setValue(appointment);
+
 
                     }
                 }).create().show();

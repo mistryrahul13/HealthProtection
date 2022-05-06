@@ -3,22 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/docPending"
-        android:title="Pending"
-        android:icon="@drawable/ic_pending"
+        android:title="Records"
+        android:icon="@drawable/ic_pnd"
         app:itemIconTint="@color/black"
         app:itemTextColor="@color/black"
         android:enabled="true"/>
     <item
         android:id="@+id/docAccept"
         android:title="Accept"
-        android:icon="@drawable/ic_accept"
+        android:icon="@drawable/ic_ok"
         app:itemIconTint="@color/black"
         app:itemTextColor="@color/black"
         android:enabled="true"/>
     <item
         android:id="@+id/docReject"
         android:title="Reject"
-        android:icon="@drawable/ic_cancel"
+        android:icon="@drawable/ic_clc"
         app:itemIconTint="@color/black"
         app:itemTextColor="@color/black"
         android:enabled="true"/>

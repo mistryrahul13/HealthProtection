@@ -37,10 +37,7 @@
                     android:id="@+id/help"
                     android:icon="@drawable/icon_help"
                     android:title="Help"/>
-                <item
-                    android:id="@+id/editpro"
-                    android:icon="@drawable/icon_person"
-                    android:title="Edit Profile"/>
+
                 <item
                     android:id="@+id/setting"
                     android:icon="@drawable/icon_settings"
@@ -49,3 +46,8 @@
         </item>
     </group>
 </menu>
+
+<!--<item-->
+<!--android:id="@+id/editpro"-->
+<!--android:icon="@drawable/icon_person"-->
+<!--android:title="Edit Profile"/>-->

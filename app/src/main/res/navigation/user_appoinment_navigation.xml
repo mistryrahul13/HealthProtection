@@ -20,7 +20,7 @@
         android:id="@+id/userAcceptAppointmentFragment"
         android:name="com.example.healthprotection.health_static.userAppoinment.UserAcceptAppointmentFragment"
         android:label="fragment_user_accept_appoimtment"
-        tools:layout="@layout/fragment_user_accept_appoimtment" >
+        tools:layout="@layout/fragment_user_accept_appointment" >
         <action
             android:id="@+id/action_userAcceptAppointmentFragment_to_userPendingAppoinmentFragment"
             app:destination="@id/userPendingAppoinmentFragment" />
@@ -32,7 +32,7 @@
         android:id="@+id/userRejectAppointmentFragment"
         android:name="com.example.healthprotection.health_static.userAppoinment.UserRejectAppointmentFragment"
         android:label="fragment_user_reject_appoinment"
-        tools:layout="@layout/fragment_user_reject_appoinment" >
+        tools:layout="@layout/fragment_user_reject_appointment" >
         <action
             android:id="@+id/action_userRejectAppointmentFragment_to_userPendingAppoinmentFragment"
             app:destination="@id/userPendingAppoinmentFragment" />
