@@ -1,9 +1,12 @@
 package com.example.healthprotection.health_static.doctor_activity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
@@ -30,6 +33,7 @@ public class DoctorAcceptAppointmentFragment extends Fragment {
     private FirebaseAuth auth;
     private ArrayList<Appointment> list;
     private ArrayList<String> keys;
+    private ArrayAdapter<Appointment> adapter;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -43,13 +47,14 @@ public class DoctorAcceptAppointmentFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         list = new ArrayList<>();
         keys = new ArrayList<>();
-
-        ArrayAdapter<Appointment> adapter = new ArrayAdapter<>(getActivity(), R.layout.fragment_add_doctor_details,list);
-
+        adapter = new ArrayAdapter<>(getActivity(), R.layout.fragment_add_doctor_details,list);
 
         binding.listForAccAppointment.setAdapter(adapter);
+
         auth = FirebaseAuth.getInstance();
         ref = FirebaseDatabase.getInstance().getReference("appointment");
+
+        Log.i("doctorUID",auth.getCurrentUser().getUid());
 
         ref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -60,42 +65,56 @@ public class DoctorAcceptAppointmentFragment extends Fragment {
 
                     Appointment appointment = childSnap.getValue(Appointment.class);
 
-                    if(auth.getCurrentUser().getUid().equals(appointment.getDoctorID()) && appointment.getStatus().equals("approved")){
+                    if(auth.getCurrentUser().getUid().equals(appointment.getDoctorID()) && appointment.getStatus().equals("request")){
 
                         list.add(appointment);
 
                     }
+
+//                    if(appointment.getDoctorID().equals(auth.getCurrentUser().getUid())){
+//                        list.add(appointment);
+//                    }
                     keys.add(childSnap.getKey());
                 }
                 adapter.notifyDataSetChanged();
-
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                // log lelo
+
             }
         });
-        binding.listForAccAppointment.setOnItemClickListener((adapterView, view1, i, l) -> {
+        binding.listForAccAppointment.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
-            String key = keys.get(i);
+                Appointment appointment = list.get(position);
+                String key = keys.get(position);
 
-            new AlertDialog.Builder(getActivity())
-                    .setTitle("Delete this appointment ?")
-                    .setCancelable(false)
-                    .setPositiveButton("Delete",(dialogInterface, i1) -> {
-                        new AlertDialog.Builder(getActivity())
-                                .setTitle("Sure you delete this appointment?")
-                                .setCancelable(false)
-                                .setPositiveButton("Delete",(dialogInterface1, i2) ->{
-                                    Toast.makeText(getActivity(), "Delete", Toast.LENGTH_SHORT).show();
-                                    ref.child(key).removeValue();
-                                }).setNegativeButton("cancel",(dialogInterface1, i2) -> {
-                            dialogInterface.dismiss();
-                        }).create().show();
-                    }).setNegativeButton("cancel",(dialogInterface, i1) -> {
-                dialogInterface.dismiss();
-            }).create().show();
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("Please Choose One")
+                        .setPositiveButton("Accept", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                                appointment.setStatus("approved");
+
+                                ref.child(key).setValue(appointment);
+
+
+                            }
+                        }).setNeutralButton("Denied", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                        appointment.setStatus("rejected");
+
+                        ref.child(key).setValue(appointment);
+
+                    }
+                }).create().show();
+
+            }
         });
 
     }

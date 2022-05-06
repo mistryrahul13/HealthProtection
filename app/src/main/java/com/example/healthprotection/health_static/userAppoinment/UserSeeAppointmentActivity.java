@@ -69,9 +69,9 @@ public class UserSeeAppointmentActivity extends AppCompatActivity {
         if (checkCurrentFragment("fragment_user_pending_appointment")){
             Intent i = new Intent(UserSeeAppointmentActivity.this,DashboardActivity.class);
             startActivity(i);
-        }else if (checkCurrentFragment("fragment_user_accept_appointment")){
+        }else if (checkCurrentFragment("fragment_user_accept_appoimtment")){
             Navigation.findNavController(this,R.id.fcvuser).navigate(R.id.userPendingAppoinmentFragment);
-        }else if (checkCurrentFragment("fragment_user_reject_appointment")) {
+        }else if (checkCurrentFragment("fragment_user_reject_appoinment")) {
             Navigation.findNavController(this, R.id.fcvuser).navigate(R.id.userPendingAppoinmentFragment);
         }
     }

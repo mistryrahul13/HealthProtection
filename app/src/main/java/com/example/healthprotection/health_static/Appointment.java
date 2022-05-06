@@ -16,6 +16,16 @@ public class Appointment implements Serializable {
 
     }
 
+    @Override
+    public String toString() {
+        return "Appointment" +
+                "\npatientname          =" + patientname +
+                "\npatientDiagnosis     =" + patientDiagnosis +
+                "\ndiagnosisdescription =" + diagnosisdescription +
+                "\ntime                 =" + time +
+                "\ndate                 =" + date ;
+    }
+
     public Appointment(String patientname, String patientDiagnosis, String diagnosisdescription, String time, String date, String status, String patientId, String doctorID) {
         this.patientname = patientname;
         this.patientDiagnosis = patientDiagnosis;
