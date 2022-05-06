@@ -4,26 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/splshactjpg"
+    android:background="@drawable/newwelcome"
     tools:context=".health_static.SplashScreenActivity">
-
-<!--    <ImageView-->
-<!--        android:id="@+id/splshimg"-->
-<!--        android:layout_width="50dp"-->
-<!--        android:layout_height="50dp"-->
-<!--        android:layout_centerVertical="true"-->
-<!--        android:layout_alignStart="@id/hms"-->
-<!--        android:layout_below="@id/hms"-->
-<!--        android:layout_marginTop="30dp"-->
-<!--        android:background="@drawable/splashimg" />-->
 
     <ImageView
         android:id="@+id/ivhms"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/helogo" />
+        android:layout_marginTop="80dp"
+        android:background="@drawable/welcome" />
+
+    <TextView
+        android:id="@+id/tvHE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/ivhms"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:letterSpacing="0.1"
+        android:text="Health Expert"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="italic" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieview"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/tvHE"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/medical">
+
+
+    </com.airbnb.lottie.LottieAnimationView>
 
 
 </RelativeLayout>

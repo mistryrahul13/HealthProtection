@@ -1,10 +1,8 @@
 package com.example.healthprotection.health_static;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-
 import com.example.healthprotection.databinding.ActivitySplashScreenBinding;
 import com.example.healthprotection.health_static.authentication.UserActivity;
 
@@ -22,7 +20,7 @@ public class SplashScreenActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(1500);
+                    Thread.sleep(2000);
                 }catch (Exception e){
 
                 }
@@ -31,7 +29,5 @@ public class SplashScreenActivity extends AppCompatActivity {
                 finish();
             }
         }).start();
-
-
     }
 }

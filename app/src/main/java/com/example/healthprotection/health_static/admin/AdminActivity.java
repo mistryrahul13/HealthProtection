@@ -27,15 +27,15 @@ public class AdminActivity extends AppCompatActivity {
 
                 switch (item.getItemId()){
                     case R.id.doctor01:
-                        Navigation.findNavController(AdminActivity.this,R.id.fcv).navigate(R.id.adminDoctorFragment);
+                        Navigation.findNavController(AdminActivity.this,R.id.fcv).navigate(R.id.newAdminDoctorFragment);
                         break;
 
                     case R.id.Appointments01:
-                        Navigation.findNavController(AdminActivity.this,R.id.fcv).navigate(R.id.adminAppointmentFragment);
+                        Navigation.findNavController(AdminActivity.this,R.id.fcv).navigate(R.id.newAdminAppointmentFragment2);
                         break;
 
                     case R.id.testre:
-                        Navigation.findNavController(AdminActivity.this,R.id.fcv).navigate(R.id.adminTestrpFragment);
+                        Navigation.findNavController(AdminActivity.this,R.id.fcv).navigate(R.id.newAdminTestrpFragment);
                         break;
                 }
 
@@ -51,9 +51,9 @@ public class AdminActivity extends AppCompatActivity {
             i.addCategory(Intent.CATEGORY_HOME);
             startActivity(i);
         }else if (checkCurrentFragment("fragment_admin_appointment")){
-            Navigation.findNavController(this,R.id.fcv).navigate(R.id.adminDoctorFragment);
+            Navigation.findNavController(this,R.id.fcv).navigate(R.id.newAdminDoctorFragment);
         }else if (checkCurrentFragment("fragment_admin_testrp")) {
-            Navigation.findNavController(this, R.id.fcv).navigate(R.id.adminDoctorFragment);
+            Navigation.findNavController(this, R.id.fcv).navigate(R.id.newAdminDoctorFragment);
         }
     }
     Boolean checkCurrentFragment(String name){

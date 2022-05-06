@@ -5,31 +5,47 @@
       <map>
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/drawable-v24/ic_email.xml" value="0.1385" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/drawable-v24/ic_launcher_background.xml" value="0.1385" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/drawable-v24/ic_pending.xml" value="0.121" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/activity_admin.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/activity_admin_panel.xml" value="0.25" />
-        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/activity_dashboard.xml" value="0.25" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/activity_dashboard.xml" value="0.2" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/activity_doctor.xml" value="0.25" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/activity_doctor_details.xml" value="0.1" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/activity_see_doc_list.xml" value="0.2" />
-        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/activity_splash_screen.xml" value="0.152" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/activity_splash_screen.xml" value="0.264" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/activity_user.xml" value="0.25" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/activity_user_see_appointment.xml" value="0.25" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/add_doctor_dailog.xml" value="0.25" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/book_appointment_dailog.xml" value="0.25" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/ctoolbar.xml" value="0.25" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/doctor_list_rv_user.xml" value="0.25" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/edit_heder.xml" value="0.25" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/fragment_add_doctor_details.xml" value="0.25" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/fragment_admin_appointment.xml" value="0.25" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/fragment_admin_doctor.xml" value="0.25" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/fragment_admin_testrp.xml" value="0.25" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/fragment_doctor_accept_appointment.xml" value="0.25" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/fragment_doctor_all_appointment.xml" value="0.25" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/fragment_doctor_reject_appointment.xml" value="0.25" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/fragment_foreget.xml" value="0.25" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/fragment_login_frag.xml" value="0.25" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/fragment_login_fragement.xml" value="0.25" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/fragment_new_admin_appointment.xml" value="0.25" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/fragment_new_admin_doctor.xml" value="0.25" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/fragment_new_admin_testrp.xml" value="0.2359375" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/fragment_sign_up.xml" value="0.25" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/fragment_user_accept_appoimtment.xml" value="0.1" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/fragment_user_pending_appointment.xml" value="0.25" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/fragment_user_reject_appoinment.xml" value="0.25" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/header_layput.xml" value="0.25" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/layout/update_doctor_dailog.xml" value="0.25" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/menu/bottom.xml" value="0.25" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/menu/deshbord_menu.xml" value="0.25" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/menu/doctor_bottom.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/menu/menu_file.xml" value="0.25" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/menu/right_menu.xml" value="0.1" />
+        <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/menu/user_appoinment_bottom.xml" value="0.1" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/mipmap-anydpi-v26/he_new.xml" value="0.1385" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/mipmap-anydpi-v26/he_new_round.xml" value="0.121" />
         <entry key="..\:/Users/mistr/AndroidStudioProjects/HealthProtection/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1385" />

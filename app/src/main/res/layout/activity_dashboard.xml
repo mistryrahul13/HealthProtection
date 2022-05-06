@@ -16,38 +16,75 @@
 <!--            layout="@layout/ctoolbar" />-->
 
 <!--    </RelativeLayout>-->
-    <ScrollView
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:id="@+id/topappbar_user"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Health Expert"
+            app:collapsedTitleTextColor="@color/black"
+            app:expandedTitleTextColor="@color/black"
+            app:collapsedTitleGravity="start"
+            app:expandedTitleGravity="center"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:src="@drawable/settings"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"/>
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:layout_collapseMode="pin"
+                app:titleTextColor="@color/white"
+                app:navigationIcon="@drawable/icon_menu_24"
+                app:menu="@menu/right_menu" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <include
-                android:id="@+id/toolbardashboard"
-                layout="@layout/ctoolbar"/>
-
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/doctorcard"
-                android:layout_width="250dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:layout_centerHorizontal="true"
                 app:cardCornerRadius="25dp"
                 app:cardElevation="10dp"
-                android:layout_below="@id/toolbardashboard">
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="250dp"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="250dp"
-                        android:layout_height="170dp"
-                        app:srcCompat="@drawable/doctor_tilak"
+                        android:layout_width="150dp"
+                        android:layout_height="120dp"
+                        app:srcCompat="@drawable/doctor_rahul"
                         android:scaleType="centerCrop" />
 
                     <LinearLayout
@@ -82,23 +119,23 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/testreportcard"
-                android:layout_width="250dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:layout_centerHorizontal="true"
+                android:layout_alignParentEnd="true"
                 app:cardCornerRadius="25dp"
                 app:cardElevation="10dp"
-                android:layout_below="@id/doctorcard">
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="250dp"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="250dp"
-                        android:layout_height="170dp"
-                        app:srcCompat="@drawable/labtest_tilak"
+                        android:layout_width="150dp"
+                        android:layout_height="120dp"
+                        app:srcCompat="@drawable/testtube_rahul"
                         android:scaleType="centerCrop" />
 
                     <LinearLayout
@@ -125,15 +162,18 @@
                             android:textAppearance="?attr/textAppearanceBodyMedium"
                             android:textColor="#606060"/>
 
+                        </LinearLayout>
+
                     </LinearLayout>
 
-                </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-            </com.google.android.material.card.MaterialCardView>
+            </RelativeLayout>
 
-        </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
 
-    </ScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
@@ -141,7 +181,6 @@
         android:layout_gravity="start"
         android:id="@+id/navigationView"
         app:headerLayout="@layout/header_layput"
-        app:menu="@menu/menu_file"/>
-
+        app:menu="@menu/deshbord_menu"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

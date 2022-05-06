@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthProtection">
         <activity
+            android:name=".health_static.userAppoinment.UserSeeAppointmentActivity"
+            android:exported="false" />
+        <activity
             android:name=".health_static.DoctorDetailsActivity"
             android:exported="false" />
         <activity

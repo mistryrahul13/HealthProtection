@@ -88,7 +88,7 @@ public class SeeDocListActivity extends AppCompatActivity implements DoctorUserA
 
             }
         });
-        binding.toolbardashboard.ctb.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+        binding.toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
 
